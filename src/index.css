@@ -10,26 +10,29 @@
   align-items: center;
 }
 
-h2 {
+h2,
+h3 {
   margin: 3px 0;
 }
 
 p {
-  margin: 5px 0;
+  margin: 0;
   font-weight: 400;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #000;
   text-decoration: inherit;
+  transition: ease 0.3s all;
 }
+
 a:hover {
-  color: #535bf2;
+  transform: scale(1.03);
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #f1f1f1;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;

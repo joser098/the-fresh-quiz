@@ -1,6 +1,7 @@
 import Profile from "./Profile/Profile";
 import { useProfileStore } from "../store/profile";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Categories from "./Categories/Categories";
 
 const Home = () => {
   const setUser = useProfileStore((state) => state.setUser);
@@ -16,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Profile />
-      <h2>Home</h2>
+      <Categories />
     </>
   );
 };
