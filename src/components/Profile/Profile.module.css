@@ -1,0 +1,15 @@
+.profile_header {
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.title p {
+  color: #737373;
+}
+
+.records {
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.08);
+}
