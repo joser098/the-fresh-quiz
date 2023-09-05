@@ -1,0 +1,17 @@
+.container {
+  /* justify-content: center; */ /*para pc*/
+  text-align: center;
+  width: 100%;
+}
+
+.container img {
+  padding: 0 1rem 10px;
+}
+
+.container h6 {
+  margin: 0;
+}
+
+.container p {
+  color: #3eb8d4;
+}
