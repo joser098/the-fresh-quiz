@@ -1,0 +1,61 @@
+.container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header a {
+  background-color: #fff;
+  margin-right: 1rem;
+  border-radius: 20px;
+  padding: 4.5px 12px;
+  border: 1px solid #efefef;
+}
+
+.progress {
+  width: 100%;
+  border-radius: 20px;
+  height: 10px;
+  background-color: #ccc;
+}
+
+.progress::-webkit-progress-value {
+  background-color: #ff9f41;
+  border-radius: 20px; /* Cambia el color de la parte llena de la barra de progreso en navegadores webkit (como Chrome) */
+}
+
+.progress::-webkit-progress-bar {
+  border-radius: 20px;
+  background-color: #ccc; /* Cambia el color de la parte vacía de la barra de progreso en navegadores webkit (como Chrome) */
+}
+
+.bar {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 20px;
+  padding: 7px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar span {
+  font-size: small;
+  font-weight: 500;
+  color: #3eb8d4;
+  margin: 0 10px;
+}
+
+.nextBtn {
+  background-color: #3eb8d4;
+  color: #fff;
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
