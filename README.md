@@ -1,4 +1,6 @@
 # The fresh Quiz
+[Deploy Aqui](https://the-fresh-quiz.vercel.app/)
+
 Es un juego de preguntas de diferentes categorias, estas viene de una api publica.
 
 ## Para iniciar el proyecto 
