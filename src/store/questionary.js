@@ -15,10 +15,6 @@ export const useQuestionaryStore = create((set, get) => {
         optionSelected: option,
       });
     },
-    time: 10,
-    setTime: () => {
-      set({ time: 10 });
-    },
     timerExpired: false,
     setTimerExpired: (value) => {
       set({ timerExpired: value });

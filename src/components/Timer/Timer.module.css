@@ -1,0 +1,11 @@
+.time {
+  color: #737373;
+  font-weight: 600;
+  top: -25px;
+  position: absolute;
+  display: inline-flex;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid #737373;
+}

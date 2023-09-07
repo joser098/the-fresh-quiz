@@ -1,26 +1,15 @@
 .bg_title {
-  margin: 2rem 0;
-  padding: 4rem 1rem; /* agregar paddin en otras pantallas */
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem !important;
+  margin-bottom: 2rem !important;
+  padding: 6rem 0;
   background-color: #dcf8ff;
   border-radius: 10px;
 }
 
 .title {
   text-align: center;
-}
-
-.options {
-  width: 100%;
-  justify-content: space-between;
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 1rem 0;
-}
-
-.options label {
-  margin-left: 1rem;
-}
-
-.options input {
-  margin-right: 1rem;
 }
