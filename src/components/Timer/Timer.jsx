@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import s from "./Timer.module.css";
 
 const Timer = ({ timerKey, seconds, timerExpired }) => {
   const [time, setTime] = useState(seconds);
@@ -18,7 +19,7 @@ const Timer = ({ timerKey, seconds, timerExpired }) => {
 
     setTimeout(() => {
       clearInterval(countdown);
-      if (time == 0) {
+      if (time === 0) {
         timerExpired();
       }
     }, seconds * 1000);
@@ -28,7 +29,7 @@ const Timer = ({ timerKey, seconds, timerExpired }) => {
 
   return (
     <>
-      <p>{time}</p>
+      <p className={s.time}>{time}</p>
     </>
   );
 };

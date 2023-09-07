@@ -5,7 +5,8 @@ import s from "./Questionary.module.css";
 import Question from "../Question/Question";
 
 const Questionary = () => {
-  const [progressBar, setProgressBar] = useState(0);
+  const [finished, setFinished] = useState(false);
+  const [progressBar, setProgressBar] = useState(1);
   const { id } = useParams();
   const currentQuestionary = useQuestionaryStore(
     (state) => state.currentQuestionary
@@ -13,7 +14,6 @@ const Questionary = () => {
   const setCurrentQuestionary = useQuestionaryStore(
     (state) => state.setCurrentQuestionary
   );
-  const optionSelected = useQuestionaryStore((state) => state.optionSelected);
   const setOptionSelected = useQuestionaryStore(
     (state) => state.setOptionSelected
   );
@@ -21,14 +21,12 @@ const Questionary = () => {
 
   const handleNextButton = () => {
     setProgressBar(progressBar + 1);
-
-    if (optionSelected === "option1") {
-      alert("respuesta correcta");
-    } else {
-      alert("respuesta incorrecta");
-    }
-
     setTimerExpired(false);
+    setOptionSelected(" ");
+  };
+
+  const handleFinishedBtn = () => {
+    setFinished(true);
   };
 
   useEffect(() => {
@@ -54,11 +52,21 @@ const Questionary = () => {
           </span>
         </div>
       </div>
-      <Question currentQuestion={currentQuestionary[progressBar]} />
-      <button className={s.nextBtn} onClick={handleNextButton}>
-        {" "}
-        Next{" "}
-      </button>
+      <Question
+        currentQuestion={currentQuestionary[progressBar - 1]}
+        totalQuestions={currentQuestionary.length}
+        finished={finished}
+      />
+
+      {progressBar === currentQuestionary.length ? (
+        <button className={s.nextBtn} onClick={handleFinishedBtn}>
+          Finalizar
+        </button>
+      ) : (
+        <button className={s.nextBtn} onClick={handleNextButton}>
+          Next
+        </button>
+      )}
     </section>
   );
 };
