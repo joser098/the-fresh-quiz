@@ -1,8 +1,13 @@
-# React + Vite
+# The fresh Quiz
+Es un juego de preguntas de diferentes categorias, estas viene de una api publica.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Para iniciar el proyecto 
+Utiliza el comando npm run dev.
 
-Currently, two official plugins are available:
+### Tecnologias
+-React Js
+-Zustand (para estados globales)
+-CSS modules
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### HECHO CON  ❤️ POR [Jose Jaramillo](https://github.com/joser098)
+[Correo](mailto:josejaramillo098@gmail.com)
