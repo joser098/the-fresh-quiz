@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import CategoryCard from "../CategoryCard/CategoryCard";
 import s from "./Categories.module.css";
+const CATEGORIES_URI = "https://quiz-7.com/categories.json";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("https://quiz-7.com/categories.json")
+    fetch(CATEGORIES_URI)
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
@@ -14,6 +15,7 @@ const Categories = () => {
   return (
     <>
       <h3 className={`flex ${s.title}`}>Let's play</h3>
+      
       <section className={`flex ${s.container}`}>
         {categories.map((category) => {
           return (

@@ -5,9 +5,7 @@ import s from "./Questionary.module.css";
 import Question from "../Question/Question";
 
 const Questionary = () => {
-  const [finished, setFinished] = useState(false);
-  const [progressBar, setProgressBar] = useState(1);
-  const { id } = useParams();
+  //HOOKS
   const currentQuestionary = useQuestionaryStore(
     (state) => state.currentQuestionary
   );
@@ -19,6 +17,21 @@ const Questionary = () => {
   );
   const setTimerExpired = useQuestionaryStore((state) => state.setTimerExpired);
 
+  // LOCAL STATES
+  const [finished, setFinished] = useState(false);
+  const [progressBar, setProgressBar] = useState(1);
+  const { id } = useParams();
+
+  //LIFE CYCLE
+  useEffect(() => {
+    const fetchQuestionary = async (quesId) => {
+      await setCurrentQuestionary(quesId);
+    };
+
+    fetchQuestionary(id);
+  }, []);
+
+  //HANDLERS
   const handleNextButton = () => {
     setProgressBar(progressBar + 1);
     setTimerExpired(false);
@@ -28,14 +41,6 @@ const Questionary = () => {
   const handleFinishedBtn = () => {
     setFinished(true);
   };
-
-  useEffect(() => {
-    const fetchQuestionary = async (quesId) => {
-      await setCurrentQuestionary(quesId);
-    };
-
-    fetchQuestionary(id);
-  }, []);
 
   return (
     <section className={`flex ${s.container}`}>
@@ -52,6 +57,7 @@ const Questionary = () => {
           </span>
         </div>
       </div>
+      
       <Question
         currentQuestion={currentQuestionary[progressBar - 1]}
         totalQuestions={currentQuestionary.length}

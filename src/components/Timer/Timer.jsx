@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import s from "./Timer.module.css";
 
 const Timer = ({ timerKey, seconds, timerExpired }) => {
+  //LOCAL STATES
   const [time, setTime] = useState(seconds);
 
+  //LIFE CYCLE
   useEffect(() => {
     const countdown = setInterval(() => {
       setTime((prevTimer) => {

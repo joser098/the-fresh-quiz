@@ -4,12 +4,14 @@
   font-weight: 400;
 }
 
+/* CLASE PARA USAR FLEXBOX Y JUSTIFICAR EL CONTENIDO */
 .flex {
   margin: 10px 1rem 0;
   display: flex;
   align-items: center;
 }
 
+/* CLASE PARA LABELS Y SUS CLASES VARIABLES */
 .label {
   cursor: pointer;
   width: 100%;
@@ -29,6 +31,7 @@
   color: #ff5341;
 }
 
+/* CLASE PARA OPCIONES DE RESPUESTA Y SUS CLASES VARIABLES */
 .options {
   width: 100%;
   justify-content: space-between;
@@ -51,6 +54,7 @@
   border: 1px solid #ff5341;
 }
 
+/* CLASE PARA INPUT Y SUS CLASES VARIABLES */
 .input {
   background-position: center;
   background-size: cover;
@@ -74,6 +78,8 @@
 .input_incorrect {
   background-image: url("./assets/wrong.svg");
 }
+
+/*FORMATEOS DE TITULOS*/
 
 h2,
 h3 {

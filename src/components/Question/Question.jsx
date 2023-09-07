@@ -6,24 +6,27 @@ import s from "./Question.module.css";
 import Timer from "../Timer/Timer";
 
 const Question = ({ currentQuestion, totalQuestions, finished }) => {
+  //HOOKS
   const navigate = useNavigate();
-  const [points, setPoints] = useState(0);
-  const [correctClass, setCorrectClass] = useState(true);
   const optionSelected = useQuestionaryStore((state) => state.optionSelected);
-  const setOptionSelected = useQuestionaryStore(
-    (state) => state.setOptionSelected
-  );
+  const setOptionSelected = useQuestionaryStore((state) => state.setOptionSelected);
   const timerExpired = useQuestionaryStore((state) => state.timerExpired);
   const setTimerExpired = useQuestionaryStore((state) => state.setTimerExpired);
+
+  //LOCAL STATES
+  const [points, setPoints] = useState(0);
+  const [correctClass, setCorrectClass] = useState(true);
   const [options, setOptions] = useState([]);
   const [timerKey, setTimerKey] = useState(0);
 
+  //LIFE CYCLE
   useEffect(() => {
     setCorrectClass(false);
     setOptions(randomOrder(currentQuestion));
     setTimerKey(timerKey + 1);
   }, [currentQuestion]);
 
+  //HANDLERS
   const handleOptionSelected = (e) => {
     setCorrectClass(true);
 
@@ -65,6 +68,7 @@ const Question = ({ currentQuestion, totalQuestions, finished }) => {
                 : "options defaultOptions"
             }`}
           >
+
             <label
               className={`${
                 correctClass && option.value === "option1"
@@ -77,6 +81,7 @@ const Question = ({ currentQuestion, totalQuestions, finished }) => {
             >
               {option.name}
             </label>
+
             <input
               className={`${
                 correctClass && option.value === "option1"
@@ -91,11 +96,13 @@ const Question = ({ currentQuestion, totalQuestions, finished }) => {
               onChange={handleOptionSelected}
               value={option.value}
               disabled={timerExpired}
-              // checked={false}
             />
+
           </div>
         );
       })}
+
+      {/*SE EJECUTA EN LA ULTIMA PREGUNTA AL HACER CLICK EN 'FINALIZAR' PARA MOSTRAR EL RESULTADO */}
       {finished ? handleFinishGame() : null}
     </>
   );

@@ -25,12 +25,12 @@
 
 .progress::-webkit-progress-value {
   background-color: #ff9f41;
-  border-radius: 20px; /* Cambia el color de la parte llena de la barra de progreso en navegadores webkit (como Chrome) */
+  border-radius: 20px; 
 }
 
 .progress::-webkit-progress-bar {
   border-radius: 20px;
-  background-color: #ccc; /* Cambia el color de la parte vacía de la barra de progreso en navegadores webkit (como Chrome) */
+  background-color: #ccc; 
 }
 
 .bar {

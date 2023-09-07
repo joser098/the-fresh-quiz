@@ -1,6 +1,6 @@
 .container {
   flex-wrap: wrap;
-  justify-content: space-between; /* para mayor with ajustar a space-evenly */
+  justify-content: space-between; /* para mayor width se puede ajustar a space-evenly */
   margin-top: 1rem;
 }
 

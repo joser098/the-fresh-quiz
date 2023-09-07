@@ -6,6 +6,7 @@ import trophySvg from "../../assets/trophy.svg";
 
 const Profile = () => {
   const user = useProfileStore((state) => state.user);
+
   return (
     <>
       <header className={`flex ${s.profile_header}`}>
